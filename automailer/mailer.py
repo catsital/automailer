@@ -45,9 +45,9 @@ class Mailer:
     ):
         msg = MIMEMultipart('related')
         msg['From'] = formataddr((self.name, self.sender))
-        msg['To'] = (',' . join(receivers))
-        msg['Cc'] = (',' . join(cc))
-        msg['Bcc'] = (',' . join(bcc))
+        msg['To'] = (','.join(receivers))
+        msg['Cc'] = (','.join(cc))
+        msg['Bcc'] = (','.join(bcc))
         msg['Subject'] = subject
 
         msg_content = MIMEMultipart('alternative')
